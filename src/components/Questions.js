@@ -13,7 +13,10 @@ class Questions extends Component {
             )
         } else if (this.props.state.question===6) {
             return(
+                <div>
             <h1>Your result</h1>
+            <button onClick={()=>this.props.startQuiz()}>Restart Quiz</button>
+            </div>
             )
         } else {
             return (
