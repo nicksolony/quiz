@@ -60,11 +60,27 @@ class Quiz extends Component {
         })
     }
 
+    chooseAnswer = (e) => {
+        
+        this.setState(prevState => {
+            // questions: {
+            //     ...prevState.questions,
+            //     [prevState.questions[0].pick]: e.target.id,
+            // },
+            const newQs = [...prevState.questions];
+            newQs[this.state.question-1].pick = e.target.id;
+            return {questions: newQs};
+        });
+         this.setState({
+            question:this.state.question+1
+        })
+    };
+
     render() {
         return (
             <div>
                 <Title question={this.state.question}/>
-                <Questions startQuiz={this.startQuiz} state={this.state}/>
+                <Questions startQuiz={this.startQuiz} chooseAnswer = {this.chooseAnswer} state={this.state}/>
             </div>
         )
     }

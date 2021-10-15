@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Question from "./Question";
 import '../App.css'
 
 class Questions extends Component {
@@ -10,10 +11,14 @@ class Questions extends Component {
                     <button onClick={()=>this.props.startQuiz()}>Start Quiz</button>
                 </div>
             )
+        } else if (this.props.state.question===6) {
+            return(
+            <h1>Your result</h1>
+            )
         } else {
             return (
                 <div>
-                    {this.props.state.questions[this.props.state.question-1].question}                       
+                    <Question chooseAnswer = {this.props.chooseAnswer} question={this.props.state.questions[this.props.state.question-1]}/>           
                 </div>
                  )}
         }
