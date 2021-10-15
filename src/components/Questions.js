@@ -12,13 +12,22 @@ class Questions extends Component {
                 </div>
             )
         } else if (this.props.state.question===6) {
-            return(
-                <div>
-            <h1>Your result</h1>
-            <button onClick={()=>this.props.startQuiz()}>Restart Quiz</button>
-            </div>
-            )
+            
+            if (this.props.state.ny > this.props.state.la) {
+                return(
+                    <div>    
+                        <h2>Congrats, you are a survivor!  You just escaped from New York!</h2>
+                        <button onClick={()=>this.props.startQuiz()}>Restart Quiz</button>
+                    </div>
+                )
         } else {
+            return (
+                <div>
+                    <h2>Congrats, you are a survivor!  You just escaped from Los Angeles!</h2>
+                    <button onClick={()=>this.props.startQuiz()}>Restart Quiz</button>
+                </div>
+            )
+        }} else {
             return (
                 <div>
                     <Question chooseAnswer = {this.props.chooseAnswer} question={this.props.state.questions[this.props.state.question-1]}/>           
