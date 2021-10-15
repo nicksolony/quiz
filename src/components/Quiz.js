@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../App.css'
 import Title from './Title';
+import Questions from './Questions';
 
 class Quiz extends Component {
 
@@ -63,6 +64,7 @@ class Quiz extends Component {
         return (
             <div>
                 <Title question={this.state.question}/>
+                <Questions startQuiz={this.startQuiz} state={this.state}/>
             </div>
         )
     }
