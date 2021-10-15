@@ -52,6 +52,12 @@ class Quiz extends Component {
         })
     }
 
+    startQuiz = () => {
+        this.setState({
+            question:1
+        })
+    }
+
 
 
 }
