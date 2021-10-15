@@ -50,18 +50,34 @@ class Quiz extends Component {
                 pick:0
             }
           ],
-          question:0
+          question:0,
+          ny:0,
+          la:0
+
         })
     }
 
     startQuiz = () => {
         this.setState({
-            question:1
+            question:1,
+            ny:0,
+            la:0
+
         })
     }
 
     chooseAnswer = (e) => {
         
+        if (e.target.id==="NY") {
+            this.setState({
+                ny:this.state.ny+1
+            })
+        } else {
+            this.setState({
+                la:this.state.la+1
+            })
+        }
+
         this.setState(prevState => {
             // questions: {
             //     ...prevState.questions,
