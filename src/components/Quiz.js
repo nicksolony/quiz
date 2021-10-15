@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../App.css'
+import Title from './Title';
 
 class Quiz extends Component {
 
@@ -58,6 +59,13 @@ class Quiz extends Component {
         })
     }
 
+    render() {
+        return (
+            <div>
+                <Title question={this.state.question}/>
+            </div>
+        )
+    }
 
 
 }
