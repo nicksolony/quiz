@@ -3,6 +3,7 @@ import '../App.css'
 import Title from './Title';
 import Questions from './Questions';
 
+
 class Quiz extends Component {
 
     constructor(props) {

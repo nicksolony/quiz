@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Question from "./Question";
+// import StatusBar from './StatusBar'
 import '../App.css'
 
 class Questions extends Component {
@@ -30,7 +31,8 @@ class Questions extends Component {
         }} else {
             return (
                 <div>
-                    <Question chooseAnswer = {this.props.chooseAnswer} question={this.props.state.questions[this.props.state.question-1]}/>           
+                    <Question chooseAnswer = {this.props.chooseAnswer} question={this.props.state.questions[this.props.state.question-1]}/>    
+                    {/* <StatusBar question={this.state.question}/>        */}
                 </div>
                  )}
         }
